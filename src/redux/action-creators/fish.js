@@ -60,3 +60,22 @@ export const addFish = obj => (dispatch) => {
       });
     });
 };
+
+
+export const markAsSeen = fish => async (dispatch) => {
+  dispatch({
+    type: fishes.MARK_AS_SEEN_REQUEST,
+  });
+  fish.seen = true;
+  PoultryRef.child(fish.id).update(fish).then(() => {
+    dispatch({
+      type: fishes.MARK_AS_SEEN_SUCCESSFUL,
+    });
+  })
+    .catch((err) => {
+      dispatch({
+        type: fishes.MARK_AS_SEEN_FAILED,
+        message: err.messsage,
+      });
+    });
+};

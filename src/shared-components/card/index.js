@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CardStyle } from './card.style';
 
 
@@ -16,9 +17,7 @@ const Card = (props) => {
           <span>{rest.min_dcp}</span>
         </p>
       </div>
-      <button type="button" className="card-btn xs-12 sm-off-0">
-          View
-      </button>
+      <Link to={`/card?id=${rest.id}`} className="card-btn xs-12 sm-off-0"> View </Link>
     </CardStyle>
   );
 };

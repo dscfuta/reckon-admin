@@ -29,6 +29,7 @@ flex-direction:column;
 export const HomeStyle = styled.div`
 display:flex;
 color:white;
+margin-top:45px;
 
 .breadcrumb-span{
     color: #796c6c;

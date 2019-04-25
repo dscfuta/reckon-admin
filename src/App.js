@@ -8,6 +8,7 @@ import HomePage from './pages/home';
 import NotFound from './pages/errors/not-found';
 import signin from './pages/auth/signin';
 import signup from './pages/auth/signup';
+import SinglePage from './pages/home/single-card/single';
 import forgotPassword from './pages/auth/forgot-password';
 import passwordReset from './pages/auth/password-reset';
 import VerifyEmail from './pages/auth/verify_email';
@@ -35,6 +36,7 @@ const Routes = () => (
         />
 
         <DefaultLayout component={VerifyEmail} path="/user/verify/email" />
+        <DefaultLayout component={SinglePage} exact path="/card" />
         <Route component={signin} exact path="/signin" />
         <Route component={signup} exact path="/signup" />
         <DefaultLayout component={NotFound} />

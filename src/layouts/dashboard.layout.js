@@ -34,25 +34,7 @@ export class DashboardLayout extends React.Component {
             <ModalLayout />
             <NavbarPage canSearch={canSearch} />
             <HomeStyle>
-              <div className="side-bar">
-                <div onClick={() => this.navigate('/')} className={path === '/' ? 'fa-home menu active' : 'fa-home menu'}>
-                  <span className="home-icon" onClick={this.onToggleClick}>
-                    <TiHomeOutline size={20} />
-                  </span>
-                  {
-                          type === toggle_actions.TOGGLE && status === true
-                          && <span className="home-text" style={{ display: 'none' }}>Dashboard</span>
-                        }
-                  {
-                          type === toggle_actions.TOGGLE && status === false
-                          && <span className="home-text">Dashboard</span>
-                        }
-
-                </div>
-              </div>
-              <div className="content">
-                <Component {...matchProps} />
-              </div>
+              <Component {...matchProps} />
             </HomeStyle>
             <Footer />
           </div>

@@ -42,6 +42,7 @@ export const CardStyle = styled.div`
                 position: absolute;
                 bottom: 10px;
                 left:11px;
+                text-align:center;
 
                 &:hover{
                         background:#416fc1;
